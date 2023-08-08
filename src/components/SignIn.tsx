@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { TextField, Button, Card, Typography } from '@mui/material';
 import axios from 'axios';
 
@@ -7,7 +7,7 @@ const Signin = () => {
     const [password, setPassword] = useState<String>("");
     const login = async () => {
         const res = await axios.post("http://localhost:3000/admin/login", { username, password });
-        const data = res.data;
+        console.log(res)
 
     }
 
